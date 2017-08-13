@@ -1,0 +1,516 @@
+@import "partials/normalize";
+
+$typogHeader: 'Montserrat', sans-serif; 
+$typogContent: 'Amiko', sans-serif;
+
+$gradientLightest: linear-gradient(to bottom, rgba(114,205,233,0.8),rgba(229,197,78,0.8));
+$gradientLight: linear-gradient(to bottom, rgba(255,107,107,0.8),rgba(244,213,96,0.8));
+$gradientDark: linear-gradient(to bottom, rgba(203,219,199,0.8),rgba(76,187,179,0.8));
+$gradientDarkest: linear-gradient(to bottom, rgba(24,76,84,0.8),rgba(78,205,196,0.8));
+
+html{
+	font-size: 62.5%;
+}
+
+header{
+	background: url(../images/background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction:column;
+}
+
+h1{
+	color: #535353;
+	font-family: $typogHeader;
+	margin:0;
+	font-size: 3.8rem;
+	letter-spacing: 1.5px;
+	padding: 40px 20px 40px 20px;
+	text-align: center;
+}
+
+p{
+	font-family: $typogContent;
+}
+
+section.result{
+	display: flex;
+}
+
+span{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+input[type="text"]{
+	height:50px;
+	outline:none;
+	background-color: #EBF5E8;
+	border: 2px solid #52B4AD;
+	text-transform: uppercase;
+	font-family: $typogContent;
+}
+
+input::placeholder {
+ 	color:#C1CFD1;
+}
+
+button{
+	display: flex;
+	font-family: $typogContent;
+	font-size: 2.2rem;
+	letter-spacing: 0.5px;
+	padding: 10px 15px;
+	color:#F7FFF7;
+	background-color: #205E67;
+	border: 5px solid white; 
+	margin:20px auto;
+	@media (max-width: 650px) {
+		margin:40px auto;
+	}
+}
+
+footer {
+	background-color: #52B4AD;
+}
+
+footer p{
+	color: #FFF;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 1.22rem;
+	padding:5px;
+	margin:0;
+}
+
+.hidden {
+	display:none;
+}
+
+.wrapper{
+	max-width:1000px;
+	margin: 0 auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+h1.headerMargin {
+	font-size: 5rem;
+	margin-top:20px;
+	@media (max-width: 415px) {
+		font-size: 4.5rem;
+	}
+	@media (max-width: 320px) {
+		font-size: 4rem;
+	}
+}
+
+.tagline{
+	margin:20px auto;
+	text-align: center;
+	font-size: 2.2rem;
+	letter-spacing: 0.5px;
+	@media (max-width: 650px) {
+	padding: 0 50px;
+	}
+	@media (max-width: 480px) {
+	font-size: 2rem;
+	}
+}
+
+.clockmini {
+	text-align: center;
+	margin:6px auto 12px auto;
+	font-size: 5rem;
+	color:#205E67;
+}
+
+.clockHero{
+	text-align: center;
+	margin:15px auto 25px auto;
+	font-size: 6rem;
+	color:#205E67;
+}
+
+.fa-location-arrow{
+	color:#DE5A5A;
+}
+
+.fa-moon-o{
+	font-size: 5.5rem;
+	margin:30px;
+}
+
+.fa-sun-o{
+	font-size: 5.5rem;
+	margin: 30px;
+}
+
+.form--userScroll {
+	margin:5px auto 10px auto;
+	font-family: $typogContent;
+}
+
+label.userChoice{
+	display: flex;
+	justify-content:center;
+	font-size: 2rem;
+	letter-spacing: 0.5px;
+}
+
+.form__container {
+	display: flex;
+	@media (max-width: 650px) {
+		flex-direction:column;
+	}
+}
+
+.form__container--column{
+	margin:auto;
+	display: flex;
+	flex-direction:column;
+}
+
+.form--userInput {
+	display: flex;
+	font-size: 2.5rem;
+	flex-direction:column;
+	width:45%;
+	margin: auto;
+	letter-spacing: 0.4px;
+	@media (max-width: 415px) {
+		font-size: 2rem;
+		width:70%;
+	}
+}
+
+.form--userInput input {
+	padding-left: 25px;
+	@media (max-width: 415px) {
+		padding-left: 12px;
+	}
+}
+
+.form--userInput p {
+	margin-top: 80px;
+	margin-bottom: 20px;
+	@media (max-width: 650px) {
+		margin:60px auto 20px auto;
+	}
+	@media (max-width: 415px) {
+		font-size: 2.5rem;
+
+	}
+}
+
+.select-style {
+	font-family: $typogHeader;
+	border: 3px solid #205E67;
+	width: 210px;
+	margin:10px auto 50px auto;
+	border-radius: 3px;
+	background: url(../images/scrollArrow.png);
+	background-size: 12%;
+	background-position: 90% 60%; 
+	background-repeat: no-repeat;
+}
+
+.select-style select {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 2px;
+	width:130%;
+	padding: 10px 20px;
+	border: none;
+	box-shadow: none;
+	background: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	@media (max-width: 415px) {
+		font-size: 2.3rem;
+	}
+}
+
+.select-style select:focus {
+	outline: none;
+}
+
+.results {
+	display: flex;
+	flex-direction:column;
+	margin:auto;
+}
+
+.resultDifference {
+	color: #535353;
+	text-align: center;
+	margin:auto;
+	font-size: 2rem;
+}
+
+.resultDifference p{
+	margin: 30px 10px 10px 10px;
+}
+
+.resultMessage {
+	font-family: $typogHeader;
+	font-size: 2rem;
+	margin:auto;
+}
+
+.fa-exclamation-circle{
+	font-size: 5rem;
+	margin: auto;
+	text-align: center;
+}
+
+.fa-check-circle{
+	font-size: 5rem;
+	margin: auto;
+	text-align: center;
+}
+
+.resultMessageBox {
+	padding: 10px 20px;
+	border-radius: 3px;
+	margin:10px;
+	background-color:#F0F0EB;
+	border: 4px solid #F29896;
+	color: #535353;
+}
+
+.resultMessageBox p{
+	font-family: $typogHeader;
+	font-weight: 300;
+	letter-spacing: 1.3px;
+	font-size: 4rem;
+	text-align: center;
+	@media (max-width: 415px) {
+		font-size: 3rem;
+	}
+}
+
+.resultMessage p{
+	margin: 10px;
+}
+
+.container{
+	display: flex;
+	flex-direction:column;
+	width:50%;
+	margin:10px 5px;
+	letter-spacing: 1.5px;
+	@media (max-width: 650px) {
+	margin:10px auto;
+	width:98%;
+	}
+}
+
+.containerContent{
+	text-align: center;
+	display: flex;
+	flex-direction:column;
+	margin:auto;
+}
+
+.line {
+	margin:5px auto;
+	height:2px;
+	width:200px;
+	background-color: #FFF;
+}
+
+.timeCards{
+	display: flex;
+	@media (max-width: 650px) {
+	flex-direction:column;
+	}
+}
+
+@media (max-width: 650px) {
+	.userCityContainer {
+		order:2;
+	}
+	.otherCityContainer{
+		order:1;
+	}
+}
+
+.userCityContainerLightDay{
+	background: $gradientLightest;
+	padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.userCityContainerDay{
+	background: $gradientLight;
+	padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.userCityContainerNight{
+	background: $gradientDark;
+	padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.userCityContainerDarkNight{
+	background: $gradientDarkest;
+	padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.otherCityContainerLightDay{
+background: $gradientLightest;
+padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.otherCityContainerDay{
+background: $gradientLight;
+padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.otherCityContainerNight{
+background: $gradientDark;
+padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.otherCityContainerDarkNight{
+background: $gradientDarkest;
+padding:80px 10px;
+	@media (max-width: 768px) {
+		padding:70px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:40px 10px;
+	}
+	@media (max-width: 650px) {
+		padding:20px 10px;
+	}
+}
+
+.title__icon{
+	margin-bottom:10px;
+	text-align: center;
+	font-family: $typogHeader;
+	font-size: 6rem;
+	color:#FFF;
+	@media (max-width: 415px) {
+		font-size: 5rem;
+	}
+}
+
+.title__location {
+	margin-bottom:10px;
+	text-align: center;
+	font-family: $typogHeader;
+	font-size: 3.5rem;
+	color:#FFF;
+	@media (max-width: 415px) {
+		font-size: 3rem;
+		font-weight: 300;
+	}
+}
+
+.liveTime {
+	padding:5px;
+	font-size: 5rem;
+	margin: auto;
+	@media (max-width: 415px) {
+		font-size: 4.5rem;
+	}
+}
+
+.liveTime p {
+	color: #FFF;
+	letter-spacing: 3.5px;
+	margin:10px 0;
+}
+
+.liveDate{
+	max-width: 50%;
+	font-size: 2.5rem;
+	letter-spacing: 1.5px;
+	margin: auto;
+}
+
+.liveDate p {
+	color: #FFF;
+	margin:0;
+}
+
+.form__submit{
+	display: flex;
+	font-family: $typogContent;
+	font-size: 2.2rem;
+	letter-spacing: 0.5px;
+	padding: 10px 15px;
+	color:#F7FFF7;
+	background-color: #205E67;
+	border: 5px solid white; 
+	margin:40px auto;
+	@media (max-width: 768px) {
+		margin:50px auto;
+	}
+}
+

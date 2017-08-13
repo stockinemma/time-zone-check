@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Amiko|Montserrat:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Can I Call?</title>
+</head>
+<body>
+	<header>
+		<h1 class="headerMargin">Can I Call?</h1>
+		<p class="tagline wrapper">Find out if the person on the other end of the line is running on your time.</p>
+		<i class="clockHero fa fa-clock-o" aria-hidden="true"></i>
+		<form id="userScroll" action="">
+			<div class="form__container--column">
+				<div class="form--userScroll">
+					<label class="userChoice" for="userChoice">This is for:</label>
+				</div>
+				<div class="select-style form--userScroll">
+					<select name="userChoice" id="userChoice">
+						<option value="general">GENERAL</option>
+					    <option value="business">BUSINESS</option>
+					    <option value="personal">PERSONAL</option>
+					</select>
+				</div>
+			</div>
+		</form>
+	</header>
+<div class="wrapper">
+	<main>
+		<form class ="form" id="userForm">
+			<div class="form__container">
+				<div class="form--userInput">
+					<p>
+						<i class="fa fa-location-arrow" aria-hidden="true"></i>
+						Enter <span>your</span> city:
+					</p>
+					<label for="userCity"></label>
+					<input placeholder="your city ..." id="userCity" class="" type="text" name="userCity">
+				</div>
+				<div class="form--userInput">
+					<p>
+						<i class="fa fa-location-arrow" aria-hidden="true"></i>
+						Enter <span>their</span> city:
+					</p>
+					<label for="otherCity"></label>
+					<input placeholder="their city ..." id="otherCity" class="" type="text" name="otherCity">
+				</div>
+			</div>
+			<input class="form__submit" type="submit" value="COMPARE TIMES!">
+		</form>
+		<section class="results">
+			<div class="resultDifference">
+				<!-- holds actual time difference value -->
+			</div>
+			<div class="resultMessage">
+				<!-- holds result message -->
+			</div>
+		</section>
+		<section class="timeCards">
+			<div id="userCityContainer" class="container userCityContainer">
+				<div class="containerContent">
+					<div class="title__icon userIcon">
+						<!-- holds day/night icon -->
+					</div>
+					<div class="title__location userLoc">
+						<!-- holds location -->
+					</div>
+					<div class="line"></div>
+					<div class="liveTime userLiveTime">
+						<!-- holds userCityTime -->
+					</div>
+					<div class="liveDate userDate">
+						<!-- holds userCityDate -->
+					</div>
+				</div>
+			</div>
+			<div id="otherCityContainer" class="container otherCityContainer">
+				<div class="containerContent">
+					<div class="title__icon otherIcon">
+						<!-- holds day/night icon -->
+					</div>
+					<div class="title__location otherLoc">
+						<!-- holds location -->
+					</div>
+					<div class="line"></div>
+					<div class="liveTime otherLiveTime">
+						<!-- holds otherCityTime -->
+					</div>
+					<div class="liveDate otherDate">
+						<!-- holds otherCityDate -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<button class="hidden checkAnother">CHECK ANOTHER TIME!</button>
+	</main>
+</div>
+<footer>
+	<p></p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
